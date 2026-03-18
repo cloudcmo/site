@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carl Lyons — Strategic Marketing Advisor</title>
+  <meta name="description" content="Carl Lyons helps businesses get clear on what they are, why they matter, and how to communicate it. Strategic marketing advisor based in London.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0f0f0e;
+      --white: #fafaf8;
+      --muted: #6b6b67;
+      --hint: #a8a8a3;
+      --border: rgba(15,15,14,0.12);
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 400;
+      color: var(--black);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    nav {
+      padding: 28px 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 18px;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: -0.2px;
+    }
+
+    .nav-cta {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 9px 20px;
+      border: 0.5px solid rgba(15,15,14,0.35);
+      border-radius: 100px;
+      color: var(--black);
+      text-decoration: none;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .nav-cta:hover {
+      background: rgba(15,15,14,0.05);
+      border-color: rgba(15,15,14,0.5);
+    }
+
+    section {
+      padding: 88px 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--hint);
+      margin-bottom: 52px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(54px, 9vw, 92px);
+      line-height: 1.0;
+      letter-spacing: -2.5px;
+      margin-bottom: 32px;
+    }
+
+    h1 em, h2 em {
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(34px, 5vw, 50px);
+      line-height: 1.08;
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-family: var(--serif);
+      font-size: 21px;
+      letter-spacing: -0.3px;
+      margin-bottom: 14px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.72;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    p + p { margin-top: 16px; }
+
+    #hero { padding: 104px 0 88px; }
+
+    .hero-sub {
+      font-size: 19px;
+      line-height: 1.65;
+      max-width: 520px;
+      margin-bottom: 52px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 15px 30px;
+      border-radius: 100px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .btn-primary:hover { opacity: 0.78; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .problem-list { list-style: none; }
+
+    .problem-item {
+      padding: 20px 0;
+      border-top: 0.5px solid var(--border);
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--muted);
+      font-weight: 300;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .problem-item:last-child { border-bottom: 0.5px solid var(--border); }
+
+    .dash {
+      color: var(--hint);
+      font-size: 14px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .what-points {
+      list-style: none;
+      margin-top: 36px;
+      display: grid;
+      gap: 24px;
+    }
+
+    .what-point { display: flex; gap: 14px; align-items: flex-start; }
+
+    .point-num {
+      font-family: var(--serif);
+      font-size: 13px;
+      color: var(--hint);
+      min-width: 22px;
+      padding-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .point-text {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .point-text strong { font-weight: 500; color: var(--black); }
+
+    .note {
+      margin-top: 28px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--hint);
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 60px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+    }
+
+    .stage { background: var(--white); padding: 36px 28px 32px; }
+
+    .stage-num {
+      font-family: var(--serif);
+      font-size: 44px;
+      line-height: 1;
+      color: var(--black);
+      opacity: 0.1;
+      margin-bottom: 20px;
+    }
+
+    .stage-body {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .stage-outcome {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 0.5px solid var(--border);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--hint);
+    }
+
+    .client-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 48px;
+    }
+
+    .client-tag {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 16px;
+      border: 0.5px solid rgba(15,15,14,0.25);
+      border-radius: 100px;
+      color: var(--muted);
+    }
+
+    .pullquote {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3.5vw, 34px);
+      line-height: 1.35;
+      letter-spacing: -0.5px;
+      margin-top: 52px;
+      padding-left: 28px;
+      border-left: 2px solid rgba(15,15,14,0.35);
+      color: var(--black);
+    }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      margin-top: 60px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+    }
+
+    .diff-cell { background: var(--white); padding: 32px 28px; }
+
+    .diff-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--hint);
+      margin-bottom: 14px;
+    }
+
+    .diff-text {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    #cta {
+      padding: 104px 0;
+      text-align: center;
+      border-bottom: none;
+    }
+
+    #cta h2 { margin-bottom: 24px; }
+
+    .cta-sub {
+      font-size: 18px;
+      line-height: 1.65;
+      max-width: 420px;
+      margin: 0 auto 48px;
+    }
+
+    footer {
+      padding: 36px 0;
+      border-top: 0.5px solid var(--border);
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-text { font-size: 13px; color: var(--hint); }
+
+    @media (max-width: 640px) {
+      .container { padding: 0 20px; }
+      .two-col { grid-template-columns: 1fr; gap: 48px; }
+      .approach-grid { grid-template-columns: 1fr; }
+      .diff-grid { grid-template-columns: 1fr; }
+      footer .container { flex-direction: column; gap: 10px; text-align: center; }
+      h1 { letter-spacing: -1.5px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="container">
+        <a href="/" class="logo">Carl Lyons</a>
+        <a href="mailto:carl@cloudcmo.com" class="nav-cta">Start with a conversation</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <p class="section-label">Strategic Marketing Advisor</p>
+      <h1>Get famous.<br><em>Stay relevant.</em></h1>
+      <p class="hero-sub">You know your business is good. The problem is, not enough people know it — or understand why it matters. Carl Lyons helps senior leaders get clear on what they are, why they matter, and how to say it.</p>
+      <a href="mailto:carl@cloudcmo.com" class="btn-primary">Start with a conversation →</a>
+    </div>
+  </section>
+
+  <section id="problem">
+    <div class="container">
+      <p class="section-label">The situation</p>
+      <div class="two-col">
+        <div>
+          <h2>You're busy.<br><em>But it's not cutting through.</em></h2>
+          <p>The work is good. The team is good. But somewhere along the way, the story got muddled. And now marketing feels like noise.</p>
+        </div>
+        <div>
+          <ul class="problem-list">
+            <li class="problem-item"><span class="dash">—</span>"We're doing a lot, but nothing's landing."</li>
+            <li class="problem-item"><span class="dash">—</span>"Our story isn't clear, even internally."</li>
+            <li class="problem-item"><span class="dash">—</span>"We've outgrown our original positioning."</li>
+            <li class="problem-item"><span class="dash">—</span>"There are too many ideas, not enough clarity."</li>
+            <li class="problem-item"><span class="dash">—</span>"Marketing feels disconnected from the business."</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="what">
+    <div class="container">
+      <p class="section-label">What Carl does</p>
+      <div class="two-col">
+        <div>
+          <h2>Clarity is<br><em>the strategy.</em></h2>
+          <p>Before you can communicate well, you need to know what you're actually saying. Most marketing problems are positioning problems in disguise.</p>
+          <p>Carl works with founders and senior leaders to untangle the thinking, find the real story, and build a clear direction — so that everything downstream becomes easier.</p>
+        </div>
+        <div>
+          <ul class="what-points">
+            <li class="what-point">
+              <span class="point-num">01</span>
+              <span class="point-text"><strong>What the business actually is.</strong> Not the elevator pitch. The honest, compelling version — the one that makes people lean in.</span>
+            </li>
+            <li class="what-point">
+              <span class="point-num">02</span>
+              <span class="point-text"><strong>Why it matters to the right people.</strong> Positioning that's felt, not just stated. Sharp, specific, defensible.</span>
+            </li>
+            <li class="what-point">
+              <span class="point-num">03</span>
+              <span class="point-text"><strong>How to communicate it consistently.</strong> A narrative that travels — across channels, across teams, across time.</span>
+            </li>
+          </ul>
+          <p class="note">Carl works at the thinking level. Not execution. Not management. Direction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="container">
+      <p class="section-label">The approach</p>
+      <h2>Three stages.<br><em>One clear outcome.</em></h2>
+      <div class="approach-grid">
+        <div class="stage">
+          <div class="stage-num">01</div>
+          <h3>Clarity Diagnostic</h3>
+          <p class="stage-body">A structured conversation — sometimes just one — that surfaces where the confusion lives. What's the real problem? Where does the story break down? What does the business actually need to say?</p>
+          <p class="stage-outcome">You leave knowing exactly what to fix.</p>
+        </div>
+        <div class="stage">
+          <div class="stage-num">02</div>
+          <h3>Strategy &amp; Narrative Sprint</h3>
+          <p class="stage-body">A focused engagement — typically 4–6 weeks — to define positioning, sharpen the narrative, and create the strategic foundation that everything else can build from.</p>
+          <p class="stage-outcome">You leave with a clear story and a direction.</p>
+        </div>
+        <div class="stage">
+          <div class="stage-num">03</div>
+          <h3>Ongoing Advisory</h3>
+          <p class="stage-body">A retained relationship for businesses that want a senior marketing mind on call — for decisions, for sounding boards, for staying sharp as things evolve.</p>
+          <p class="stage-outcome">You always have someone in your corner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof">
+    <div class="container">
+      <p class="section-label">Track record</p>
+      <div class="two-col">
+        <div>
+          <h2>Work that<br><em>still holds.</em></h2>
+          <p>Carl has worked with some of the UK's most recognised brands — and some of its fastest-growing ones. The work tends to stick. Positioning built years ago is often still the one in use today.</p>
+          <p>That's not luck. That's what good strategic thinking does.</p>
+        </div>
+        <div>
+          <p style="font-size:15px; margin-bottom:24px; color:var(--hint);">Past clients include:</p>
+          <div class="client-tags">
+            <span class="client-tag">Tide</span>
+            <span class="client-tag">Travelex</span>
+            <span class="client-tag">Utility Warehouse</span>
+            <span class="client-tag">Unruly</span>
+            <span class="client-tag">Trainline</span>
+            <span class="client-tag">Uber</span>
+            <span class="client-tag">News UK</span>
+            <span class="client-tag">Hussle</span>
+            <span class="client-tag">The Guardian</span>
+            <span class="client-tag">lastminute.com</span>
+            <span class="client-tag">Guinness</span>
+            <span class="client-tag">Capital FM</span>
+            <span class="client-tag">Carwow</span>
+            <span class="client-tag">Direct Ferries</span>
+          </div>
+        </div>
+      </div>
+      <blockquote class="pullquote">
+        "Twenty years working at the sharp end of marketing — for startups, scale-ups, and global brands. The experience shows. The opinions are earned."
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="container">
+      <p class="section-label">Why Carl</p>
+      <h2>Not a consultant.<br><em>Not an agency.</em></h2>
+      <div class="diff-grid">
+        <div class="diff-cell">
+          <p class="diff-label">Most consultants</p>
+          <p class="diff-text">Present frameworks. Run workshops. Deliver a document. Hand it over and disappear.</p>
+        </div>
+        <div class="diff-cell">
+          <p class="diff-label">Carl</p>
+          <p class="diff-text">Gets into the business. Finds the real problem. Stays until the thinking is genuinely clear — and the direction is one you believe in.</p>
+        </div>
+        <div class="diff-cell">
+          <p class="diff-label">Fractional CMOs</p>
+          <p class="diff-text">Manage teams. Run campaigns. Sit in the meetings. Useful — but execution-focused.</p>
+        </div>
+        <div class="diff-cell">
+          <p class="diff-label">Carl</p>
+          <p class="diff-text">Works upstream. On the thinking and the story. The decisions that determine whether execution is worth doing at all.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="container">
+      <h2>The right conversation<br><em>changes everything.</em></h2>
+      <p class="cta-sub">If something here resonated — even vaguely — it's probably worth a conversation. No pitch, no pressure. Just a straightforward talk about where you are and whether Carl can help.</p>
+      <a href="mailto:carl@cloudcmo.com" class="btn-primary">Start with a conversation →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <a href="/" class="logo">Carl Lyons</a>
+      <p class="footer-text">Strategic Marketing Advisor · London · carl@cloudcmo.com</p>
+    </div>
+  </footer>
+
+</body>
+</html>
