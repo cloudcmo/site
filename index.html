@@ -8,7 +8,7 @@
   <meta name="description" content="I help businesses get clear on what they are, why they matter, and how to communicate it. Strategic marketing advisor based in London.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -20,7 +20,7 @@
       --border: rgba(17,17,16,0.1);
       --orange: #f45d00;
       --orange-light: rgba(244,93,0,0.06);
-      --serif: 'Syne', system-ui, sans-serif;
+      --display: 'Cabinet Grotesk', system-ui, sans-serif;
       --sans: 'DM Sans', system-ui, sans-serif;
     }
 
@@ -53,16 +53,24 @@
     }
 
     .logo {
-      font-family: var(--serif);
-      font-size: 16px;
-      font-weight: 700;
+      font-family: var(--display);
+      font-size: 17px;
+      font-weight: 800;
       color: var(--black);
       text-decoration: none;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
     }
 
     .logo span { color: var(--orange); }
+
+    .logo sup {
+      font-size: 9px;
+      font-weight: 700;
+      vertical-align: super;
+      color: var(--orange);
+      margin-left: 1px;
+    }
 
     .nav-cta {
       font-size: 13px;
@@ -97,11 +105,11 @@
 
     /* ── Typography ── */
     h1 {
-      font-family: var(--serif);
-      font-weight: 800;
-      font-size: clamp(52px, 8.5vw, 88px);
-      line-height: 1.0;
-      letter-spacing: -1.5px;
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(52px, 8.5vw, 90px);
+      line-height: 0.97;
+      letter-spacing: -2px;
       margin-bottom: 32px;
     }
 
@@ -111,11 +119,11 @@
     }
 
     h2 {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: clamp(32px, 5vw, 48px);
-      line-height: 1.08;
-      letter-spacing: -0.5px;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(32px, 5vw, 50px);
+      line-height: 1.05;
+      letter-spacing: -1px;
       margin-bottom: 24px;
     }
 
@@ -125,10 +133,11 @@
     }
 
     h3 {
-      font-family: var(--serif);
-      font-weight: 700;
+      font-family: var(--display);
+      font-weight: 800;
       font-size: 20px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
+      letter-spacing: -0.2px;
     }
 
     p {
@@ -146,7 +155,7 @@
     .hero-sub {
       font-size: 19px;
       line-height: 1.65;
-      max-width: 520px;
+      max-width: 540px;
       margin-bottom: 52px;
     }
 
@@ -213,9 +222,9 @@
     .what-point { display: flex; gap: 14px; align-items: flex-start; }
 
     .point-num {
-      font-family: var(--serif);
+      font-family: var(--display);
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--orange);
       min-width: 22px;
       padding-top: 3px;
@@ -238,8 +247,8 @@
       color: var(--hint);
     }
 
-    /* ── Approach grid ── */
-    .approach-grid {
+    /* ── How I work grid ── */
+    .work-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
@@ -248,32 +257,33 @@
       border: 0.5px solid var(--border);
     }
 
-    .stage {
+    .work-stage {
       background: var(--white);
       padding: 36px 28px 32px;
       transition: background 0.2s;
     }
 
-    .stage:hover { background: var(--orange-light); }
+    .work-stage:hover { background: var(--orange-light); }
 
-    .stage-num {
-      font-family: var(--serif);
+    .work-stage-num {
+      font-family: var(--display);
       font-size: 40px;
-      font-weight: 800;
+      font-weight: 900;
       line-height: 1;
       color: var(--orange);
-      opacity: 0.3;
+      opacity: 0.25;
       margin-bottom: 20px;
     }
 
-    .stage-body {
+    .work-stage-body {
       font-size: 14px;
       line-height: 1.75;
       color: var(--muted);
       font-weight: 300;
+      margin-top: 10px;
     }
 
-    .stage-outcome {
+    .work-stage-outcome {
       margin-top: 20px;
       padding-top: 16px;
       border-top: 0.5px solid var(--border);
@@ -284,86 +294,173 @@
       color: var(--orange);
     }
 
-    /* ── Clients ── */
-    .client-tags {
+    /* ── Clients / credibility ── */
+    .sector-filter {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 48px;
+      margin-bottom: 48px;
     }
 
-    .client-tag {
+    .sector-btn {
       font-size: 13px;
       font-weight: 500;
-      padding: 7px 16px;
-      border: 0.5px solid rgba(17,17,16,0.2);
+      padding: 7px 18px;
+      border: 1.5px solid var(--border);
       border-radius: 100px;
       color: var(--muted);
-      transition: border-color 0.15s, color 0.15s;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: var(--sans);
     }
 
-    .client-tag:hover {
+    .sector-btn:hover, .sector-btn.active {
       border-color: var(--orange);
       color: var(--orange);
+      background: var(--orange-light);
     }
 
-    .pullquote {
-      font-family: var(--serif);
-      font-weight: 600;
-      font-size: clamp(20px, 3vw, 30px);
-      line-height: 1.35;
-      margin-top: 52px;
-      padding-left: 28px;
-      border-left: 3px solid var(--orange);
-      color: var(--black);
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+      margin-bottom: 60px;
     }
 
-    /* ── Diff grid ── */
-    .diff-grid {
+    .logo-cell {
+      background: var(--white);
+      padding: 28px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+    }
+
+    .logo-cell:hover { background: var(--orange-light); }
+
+    .logo-cell span {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--hint);
+      text-align: center;
+      letter-spacing: 0.3px;
+      transition: color 0.15s;
+    }
+
+    .logo-cell:hover span { color: var(--black); }
+
+    .logo-cell[data-hidden="true"] { display: none; }
+
+    /* ── Testimonials ── */
+    .testimonials {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+      margin-bottom: 0;
+    }
+
+    .testimonial {
+      background: var(--white);
+      padding: 36px 32px;
+      transition: opacity 0.3s;
+    }
+
+    .testimonial[data-hidden="true"] {
+      display: none;
+    }
+
+    .testimonial-quote {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--muted);
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-attr {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--hint);
+    }
+
+    .testimonial-attr strong {
+      color: var(--black);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* ── Senior / experience section ── */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       margin-top: 60px;
       background: var(--border);
       border: 0.5px solid var(--border);
     }
 
-    .diff-cell { background: var(--white); padding: 32px 28px; }
-
-    .diff-cell:nth-child(even) { background: var(--orange-light); }
-
-    .diff-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--hint);
-      margin-bottom: 14px;
+    .exp-cell {
+      background: var(--white);
+      padding: 32px 28px;
     }
 
-    .diff-cell:nth-child(even) .diff-label { color: var(--orange); }
+    .exp-num {
+      font-family: var(--display);
+      font-size: 44px;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
 
-    .diff-text {
-      font-size: 16px;
-      line-height: 1.65;
-      color: var(--muted);
+    .exp-label {
+      font-size: 15px;
       font-weight: 300;
+      color: var(--muted);
+      line-height: 1.5;
     }
 
-    /* ── CTA ── */
-    #cta {
-      padding: 104px 0;
-      text-align: center;
+    /* ── Book section ── */
+    #book {
+      padding: 88px 0;
       border-bottom: none;
     }
 
-    #cta h2 { margin-bottom: 24px; }
+    .book-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
 
-    .cta-sub {
+    .zoom-placeholder {
+      background: var(--orange-light);
+      border: 0.5px solid rgba(244,93,0,0.2);
+      border-radius: 12px;
+      padding: 48px 32px;
+      text-align: center;
+    }
+
+    .zoom-placeholder p {
+      font-size: 14px;
+      color: var(--hint);
+      margin-top: 12px;
+    }
+
+    .zoom-placeholder .zoom-label {
+      font-family: var(--display);
       font-size: 18px;
-      line-height: 1.65;
-      max-width: 420px;
-      margin: 0 auto 48px;
+      font-weight: 800;
+      color: var(--orange);
+      margin-bottom: 8px;
     }
 
     /* ── Footer ── */
@@ -384,8 +481,11 @@
     @media (max-width: 640px) {
       .container { padding: 0 20px; }
       .two-col { grid-template-columns: 1fr; gap: 48px; }
-      .approach-grid { grid-template-columns: 1fr; }
-      .diff-grid { grid-template-columns: 1fr; }
+      .work-grid { grid-template-columns: 1fr; }
+      .logo-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials { grid-template-columns: 1fr; }
+      .experience-grid { grid-template-columns: 1fr; }
+      .book-inner { grid-template-columns: 1fr; gap: 48px; }
       footer .container { flex-direction: column; gap: 10px; text-align: center; }
       h1 { letter-spacing: -1px; }
     }
@@ -396,174 +496,277 @@
   <header>
     <nav>
       <div class="container">
-        <a href="/" class="logo">Cloud<span>CMO</span></a>
-        <a href="mailto:carl@cloudcmo.co.uk" class="nav-cta">Start with a conversation</a>
+        <a href="/" class="logo">Cloud<span>CMO</span><sup>®</sup></a>
+        <a href="#book" class="nav-cta">How can I help?</a>
       </div>
     </nav>
   </header>
 
+  <!-- Hero -->
   <section id="hero">
     <div class="container">
       <p class="section-label">Carl Mesner Lyons · Strategic Marketing Advisor</p>
       <h1>Get famous.<br><em>Stay relevant.</em></h1>
-      <p class="hero-sub">I'm Carl Mesner Lyons. I help businesses get clear on what they are, why they matter, and how to say it — especially when growth has stalled, the story has got muddy, or things are changing fast.</p>
-      <a href="mailto:carl@cloudcmo.co.uk" class="btn-primary">Start with a conversation →</a>
+      <p class="hero-sub">I'm Carl Mesner Lyons. I help businesses work out what they stand for, why it matters — and how to say it in a way that cuts through. I've done it for some big names. I can do it for you.</p>
+      <a href="#book" class="btn-primary">How can I help? →</a>
     </div>
   </section>
 
+  <!-- Problem -->
   <section id="problem">
     <div class="container">
-      <p class="section-label">The situation</p>
+      <p class="section-label">Sound familiar?</p>
       <div class="two-col">
         <div>
-          <h2>Busy.<br><em>But not cutting through.</em></h2>
-          <p>The work is good. The team is good. But somewhere along the way, the story got muddled. And now marketing feels like a lot of effort for not enough return.</p>
-          <p>I hear the same things from most of the businesses I talk to.</p>
+          <h2>Something's<br><em>not working.</em></h2>
+          <p>You're putting in the effort. The product is good. But the message isn't landing — and you can feel it.</p>
+          <p>Here's what I hear most often.</p>
         </div>
         <div>
           <ul class="problem-list">
-            <li class="problem-item"><span class="dash">—</span>"We're doing a lot, but nothing's landing."</li>
-            <li class="problem-item"><span class="dash">—</span>"Our story isn't clear, even internally."</li>
+            <li class="problem-item"><span class="dash">—</span>"We're doing a lot, but nothing's cutting through."</li>
+            <li class="problem-item"><span class="dash">—</span>"Our story isn't clear — even internally."</li>
             <li class="problem-item"><span class="dash">—</span>"We've outgrown our original positioning."</li>
-            <li class="problem-item"><span class="dash">—</span>"There are too many ideas, not enough clarity."</li>
-            <li class="problem-item"><span class="dash">—</span>"Marketing feels disconnected from the business."</li>
+            <li class="problem-item"><span class="dash">—</span>"There are too many ideas and not enough clarity."</li>
+            <li class="problem-item"><span class="dash">—</span>"Marketing feels disconnected from the rest of the business."</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- What I do -->
   <section id="what">
     <div class="container">
       <p class="section-label">What I do</p>
       <div class="two-col">
         <div>
-          <h2>Clarity is<br><em>the strategy.</em></h2>
-          <p>Before you can communicate well, you need to know what you're actually saying. Most marketing problems are positioning problems in disguise.</p>
-          <p>I work with founders and senior leaders to untangle the thinking, find the real story, and build a clear direction — so that everything downstream becomes easier.</p>
+          <h2>I find your<br><em>story. Fast.</em></h2>
+          <p>Most marketing problems are positioning problems. Fix that first — and everything else gets easier.</p>
+          <p>I get inside the business quickly, work out what's really going on, and give you the clarity and direction to move forward with confidence.</p>
         </div>
         <div>
           <ul class="what-points">
             <li class="what-point">
               <span class="point-num">01</span>
-              <span class="point-text"><strong>What the business actually is.</strong> Not the elevator pitch. The honest, compelling version — the one that makes people lean in.</span>
+              <span class="point-text"><strong>What you actually are.</strong> The honest, compelling version — the one that makes the right people lean in.</span>
             </li>
             <li class="what-point">
               <span class="point-num">02</span>
-              <span class="point-text"><strong>Why it matters to the right people.</strong> Positioning that's felt, not just stated. Sharp, specific, defensible.</span>
+              <span class="point-text"><strong>Why it matters.</strong> Sharp, specific positioning. Felt, not just stated.</span>
             </li>
             <li class="what-point">
               <span class="point-num">03</span>
-              <span class="point-text"><strong>How to communicate it consistently.</strong> A narrative that travels — across channels, across teams, across time.</span>
+              <span class="point-text"><strong>How to say it.</strong> A narrative that works across channels, teams, and time.</span>
             </li>
           </ul>
-          <p class="note">I work at the thinking level. Not execution. Not management. Direction.</p>
+          <p class="note">I work at the strategic level. Thinking and direction — not execution.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="approach">
+  <!-- How I work -->
+  <section id="how">
     <div class="container">
       <p class="section-label">How I work</p>
-      <h2>Three stages.<br><em>One clear outcome.</em></h2>
-      <div class="approach-grid">
-        <div class="stage">
-          <div class="stage-num">01</div>
-          <h3>Clarity Diagnostic</h3>
-          <p class="stage-body">A structured conversation — sometimes just one — that surfaces where the confusion lives. What's the real problem? Where does the story break down? What does the business actually need to say?</p>
-          <p class="stage-outcome">You leave knowing exactly what to fix.</p>
+      <h2>Simple process.<br><em>Real outcomes.</em></h2>
+      <div class="work-grid">
+        <div class="work-stage">
+          <div class="work-stage-num">01</div>
+          <h3>Your situation</h3>
+          <p class="work-stage-body">I get under the skin of your business fast. Where are you now? What's not working? What does the market look like? One sharp session — sometimes two — and I know what we're dealing with.</p>
+          <p class="work-stage-outcome">You get a clear diagnosis — not a deck full of questions.</p>
         </div>
-        <div class="stage">
-          <div class="stage-num">02</div>
-          <h3>Strategy &amp; Narrative Sprint</h3>
-          <p class="stage-body">A focused engagement — typically 4–6 weeks — to define positioning, sharpen the narrative, and create the strategic foundation that everything else can build from.</p>
-          <p class="stage-outcome">You leave with a clear story and a direction.</p>
+        <div class="work-stage">
+          <div class="work-stage-num">02</div>
+          <h3>The story sprint</h3>
+          <p class="work-stage-body">A focused 4–6 week engagement to build your brand narrative, sharpen your positioning, and create the strategic platform everything else grows from. Fast, collaborative, no fluff.</p>
+          <p class="work-stage-outcome">You get a brand story you believe in — and can actually use.</p>
         </div>
-        <div class="stage">
-          <div class="stage-num">03</div>
-          <h3>Ongoing Advisory</h3>
-          <p class="stage-body">A retained relationship for businesses that want a senior marketing mind on call — for decisions, for sounding boards, for staying sharp as things evolve.</p>
-          <p class="stage-outcome">You always have someone in your corner.</p>
+        <div class="work-stage">
+          <div class="work-stage-num">03</div>
+          <h3>Ongoing advisory</h3>
+          <p class="work-stage-body">Some clients want a senior marketing brain on call — for the big decisions, the tricky moments, and staying sharp as the business evolves. I work with a small number of clients this way.</p>
+          <p class="work-stage-outcome">You always have someone who knows your business in your corner.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Credibility / clients -->
   <section id="proof">
     <div class="container">
-      <p class="section-label">Track record</p>
-      <div class="two-col">
+      <p class="section-label">Who I've worked with</p>
+      <div class="two-col" style="margin-bottom: 52px;">
         <div>
-          <h2>Work that<br><em>still holds.</em></h2>
-          <p>I've worked with some of the UK's most recognised brands — and some of its fastest-growing ones. The work tends to stick. Positioning I built years ago is often still the one in use today.</p>
-          <p>That's not luck. That's what good strategic thinking does.</p>
+          <h2>Brand strategy<br><em>that moves the needle.</em></h2>
+          <p>A powerful brand story isn't a nice-to-have. It's the platform your growth is built on. Get it right and everything accelerates — your sales, your fundraising, your hiring, your market position.</p>
+          <p>I've built that story for businesses at every stage — from fast-growing startups to global brands. The work I do tends to last.</p>
         </div>
-        <div>
-          <p style="font-size:15px; margin-bottom:24px; color:var(--hint);">Past clients include:</p>
-          <div class="client-tags">
-            <span class="client-tag">Tide</span>
-            <span class="client-tag">Travelex</span>
-            <span class="client-tag">Utility Warehouse</span>
-            <span class="client-tag">Unruly</span>
-            <span class="client-tag">Trainline</span>
-            <span class="client-tag">Uber</span>
-            <span class="client-tag">News UK</span>
-            <span class="client-tag">Hussle</span>
-            <span class="client-tag">The Guardian</span>
-            <span class="client-tag">lastminute.com</span>
-            <span class="client-tag">Guinness</span>
-            <span class="client-tag">Capital FM</span>
-            <span class="client-tag">Carwow</span>
-            <span class="client-tag">Direct Ferries</span>
+        <div style="padding-top: 8px;">
+          <div class="experience-grid" style="margin-top: 0;">
+            <div class="exp-cell">
+              <div class="exp-num">20+</div>
+              <div class="exp-label">years in senior marketing roles</div>
+            </div>
+            <div class="exp-cell">
+              <div class="exp-num">40+</div>
+              <div class="exp-label">brands advised and built</div>
+            </div>
+            <div class="exp-cell">
+              <div class="exp-num">B2B<br>&amp; B2C</div>
+              <div class="exp-label" style="font-size:13px;">fintech, AI, consumer, media &amp; more</div>
+            </div>
           </div>
         </div>
       </div>
-      <blockquote class="pullquote">
-        "I've spent 20 years at the sharp end of marketing — managing blue chip brands, and being the lead marketer in high-growth startups. The experience shows. The opinions are earned."
-      </blockquote>
-    </div>
-  </section>
 
-  <section id="why">
-    <div class="container">
-      <p class="section-label">Why me</p>
-      <h2>Not a consultant.<br><em>Not an agency.</em></h2>
-      <div class="diff-grid">
-        <div class="diff-cell">
-          <p class="diff-label">Most consultants</p>
-          <p class="diff-text">Present frameworks. Run workshops. Deliver a document. Hand it over and disappear.</p>
+      <!-- Sector filter -->
+      <div class="sector-filter">
+        <button class="sector-btn active" onclick="filterSector('all', this)">All</button>
+        <button class="sector-btn" onclick="filterSector('fintech', this)">Fintech</button>
+        <button class="sector-btn" onclick="filterSector('b2b', this)">B2B</button>
+        <button class="sector-btn" onclick="filterSector('consumer', this)">Consumer</button>
+        <button class="sector-btn" onclick="filterSector('media', this)">Media</button>
+        <button class="sector-btn" onclick="filterSector('travel', this)">Travel</button>
+      </div>
+
+      <!-- Logo grid -->
+      <div class="logo-grid" id="logoGrid">
+        <div class="logo-cell" data-sectors="fintech consumer"><span>Tide</span></div>
+        <div class="logo-cell" data-sectors="fintech travel"><span>Travelex</span></div>
+        <div class="logo-cell" data-sectors="b2b consumer"><span>Utility Warehouse</span></div>
+        <div class="logo-cell" data-sectors="b2b media"><span>Unruly</span></div>
+        <div class="logo-cell" data-sectors="consumer travel"><span>Trainline</span></div>
+        <div class="logo-cell" data-sectors="consumer b2b"><span>Uber</span></div>
+        <div class="logo-cell" data-sectors="media b2b"><span>News UK</span></div>
+        <div class="logo-cell" data-sectors="consumer b2b"><span>Hussle</span></div>
+        <div class="logo-cell" data-sectors="media consumer"><span>The Guardian</span></div>
+        <div class="logo-cell" data-sectors="consumer travel"><span>lastminute.com</span></div>
+        <div class="logo-cell" data-sectors="consumer media"><span>Guinness</span></div>
+        <div class="logo-cell" data-sectors="media consumer"><span>Capital FM</span></div>
+        <div class="logo-cell" data-sectors="consumer b2b"><span>Carwow</span></div>
+        <div class="logo-cell" data-sectors="b2b travel"><span>Direct Ferries</span></div>
+        <div class="logo-cell" data-sectors="consumer"><span>OpenTable</span></div>
+        <div class="logo-cell" data-sectors="consumer media"><span>Hailo</span></div>
+      </div>
+
+      <p style="font-size:13px; color:var(--hint); margin-bottom: 48px; margin-top: -1px; padding: 16px 0 0; border-top: 0.5px solid var(--border);">
+        ★ Client logos coming soon — updating to reflect recent AI and fintech work
+      </p>
+
+      <!-- Testimonials -->
+      <div class="testimonials" id="testimonialGrid">
+        <div class="testimonial" data-sectors="all b2b media">
+          <p class="testimonial-quote">"Carl plays a key role supporting the Unruly marketing team. It's great to be able to call on his experience and abilities — we love having him as part of the business."</p>
+          <div class="testimonial-attr">
+            <strong>Sarah Wood</strong>
+            CEO, Unruly
+          </div>
         </div>
-        <div class="diff-cell">
-          <p class="diff-label">What I do instead</p>
-          <p class="diff-text">Get into the business. Find the real problem. Stay until the thinking is genuinely clear — and the direction is one you believe in.</p>
-        </div>
-        <div class="diff-cell">
-          <p class="diff-label">Fractional CMOs</p>
-          <p class="diff-text">Manage teams. Run campaigns. Sit in the meetings. Useful — but execution-focused.</p>
-        </div>
-        <div class="diff-cell">
-          <p class="diff-label">What I do instead</p>
-          <p class="diff-text">Work upstream. On the thinking and the story. The decisions that determine whether execution is worth doing at all.</p>
+        <div class="testimonial" data-sectors="all consumer b2b">
+          <p class="testimonial-quote">"Carl is a big thinker and understands how to drive emotion through brand. We've worked with him for almost two years and he's become our go-to for everything brand related."</p>
+          <div class="testimonial-attr">
+            <strong>Jamie Ward</strong>
+            CEO &amp; Co-founder, Hussle
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="cta">
+  <!-- Senior / experience -->
+  <section id="senior">
     <div class="container">
-      <h2>The right conversation<br><em>changes everything.</em></h2>
-      <p class="cta-sub">If something here resonated — even vaguely — it's probably worth a conversation. No pitch, no pressure. Just a straightforward talk about where you are and whether I can help.</p>
-      <a href="mailto:carl@cloudcmo.co.uk" class="btn-primary">Start with a conversation →</a>
+      <p class="section-label">What you get</p>
+      <div class="two-col">
+        <div>
+          <h2>Senior.<br><em>Fast. Opinionated.</em></h2>
+          <p>I've been the lead marketer in four high-growth startups. I've run brand for global names. I've sat on boards. I've written the briefs, hired the agencies, and been accountable for the results.</p>
+          <p>That means I get up to speed fast, I know what good looks like, and I'm not afraid to tell you what I think. Most clients say the first session alone is worth it.</p>
+        </div>
+        <div style="padding-top: 8px;">
+          <ul class="what-points">
+            <li class="what-point">
+              <span class="point-num">→</span>
+              <span class="point-text"><strong>No juniors, no account handlers.</strong> You work directly with me, every time.</span>
+            </li>
+            <li class="what-point">
+              <span class="point-num">→</span>
+              <span class="point-text"><strong>I've built from scratch and scaled.</strong> Startups, scale-ups, and global brands — I know what works at each stage.</span>
+            </li>
+            <li class="what-point">
+              <span class="point-num">→</span>
+              <span class="point-text"><strong>Commercial to the core.</strong> Marketing that can't be tied to growth isn't worth doing. I don't lose sight of that.</span>
+            </li>
+            <li class="what-point">
+              <span class="point-num">→</span>
+              <span class="point-text"><strong>Flexible.</strong> A one-off project or a long-term relationship — I work the way that suits you.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book -->
+  <section id="book">
+    <div class="container">
+      <p class="section-label">Let's talk</p>
+      <div class="book-inner">
+        <div>
+          <h2>Pick a time.<br><em>Let's get into it.</em></h2>
+          <p>No pitch. No proposal before we've spoken. Just a straight conversation about where you are, what's not working, and whether I can help.</p>
+          <p>Book a 15 or 30 minute slot below — or drop me an email if you'd rather start that way.</p>
+          <a href="mailto:carl@cloudcmo.co.uk" class="btn-primary" style="margin-top: 28px;">Email me directly →</a>
+        </div>
+        <div>
+          <!-- Replace the src below with your Zoom scheduler embed URL -->
+          <div class="zoom-placeholder">
+            <div class="zoom-label">Book a slot</div>
+            <p>Add your Zoom scheduler embed URL here — replace this placeholder with your embed code from Zoom's scheduler.</p>
+            <p style="margin-top:16px; font-size:13px;">zoom.us/meeting/schedule → Share → Embed</p>
+          </div>
+          <!-- ZOOM EMBED: paste your iframe here, e.g:
+          <iframe src="https://zoom.us/meeting/..." width="100%" height="500" frameborder="0"></iframe>
+          -->
+        </div>
+      </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <a href="/" class="logo">Cloud<span>CMO</span></a>
+      <a href="/" class="logo">Cloud<span>CMO</span><sup>®</sup></a>
       <p class="footer-text">Carl Mesner Lyons · Strategic Marketing Advisor · London · carl@cloudcmo.co.uk</p>
     </div>
   </footer>
+
+  <script>
+    function filterSector(sector, btn) {
+      document.querySelectorAll('.sector-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      document.querySelectorAll('.logo-cell').forEach(cell => {
+        const sectors = cell.dataset.sectors || '';
+        if (sector === 'all' || sectors.includes(sector)) {
+          cell.style.display = '';
+        } else {
+          cell.style.display = 'none';
+        }
+      });
+
+      document.querySelectorAll('.testimonial').forEach(t => {
+        const sectors = t.dataset.sectors || '';
+        if (sector === 'all' || sectors.includes(sector)) {
+          t.style.display = '';
+        } else {
+          t.style.display = 'none';
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
