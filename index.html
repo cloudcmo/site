@@ -400,7 +400,7 @@
     /* ── Senior / experience section ── */
     .experience-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1px;
       margin-top: 60px;
       background: var(--border);
@@ -611,14 +611,14 @@
               <div class="exp-label">years in senior marketing roles</div>
             </div>
             <div class="exp-cell">
-              <div class="exp-num">40+</div>
+              <div class="exp-num">100+</div>
               <div class="exp-label">brands advised and built</div>
             </div>
-            <div class="exp-cell">
-              <div class="exp-num">B2B<br>&amp; B2C</div>
-              <div class="exp-label" style="font-size:13px;">fintech, AI, consumer, media &amp; more</div>
-            </div>
           </div>
+          <blockquote style="margin-top: 1px; padding: 32px 28px; background: var(--orange-light); border: 0.5px solid rgba(244,93,0,0.15); border-top: 3px solid var(--orange);">
+            <p style="font-family: var(--display); font-size: clamp(22px, 3.5vw, 30px); font-weight: 800; line-height: 1.2; color: var(--black); margin-bottom: 16px; letter-spacing: -0.5px;">"You nailed this, Carl!"</p>
+            <p style="font-size: 13px; font-weight: 500; color: var(--muted); margin: 0; line-height: 1.5;"><strong style="color: var(--black); font-weight: 500;">Olly Thornton-Berry</strong><br>CEO, Thirdfort<br><span style="color: var(--hint); font-size: 12px;">Modern fintech &amp; legaltech</span></p>
+          </blockquote>
         </div>
       </div>
 
@@ -627,13 +627,19 @@
         <button class="sector-btn active" onclick="filterSector('all', this)">All</button>
         <button class="sector-btn" onclick="filterSector('fintech', this)">Fintech</button>
         <button class="sector-btn" onclick="filterSector('b2b', this)">B2B</button>
+        <button class="sector-btn" onclick="filterSector('saas', this)">SaaS</button>
+        <button class="sector-btn" onclick="filterSector('ai', this)">AI</button>
         <button class="sector-btn" onclick="filterSector('consumer', this)">Consumer</button>
         <button class="sector-btn" onclick="filterSector('media', this)">Media</button>
         <button class="sector-btn" onclick="filterSector('travel', this)">Travel</button>
+        <button class="sector-btn" onclick="filterSector('legaltech', this)">Legaltech</button>
+        <button class="sector-btn" onclick="filterSector('proptech', this)">Proptech</button>
+        <button class="sector-btn" onclick="filterSector('international', this)">International</button>
       </div>
 
       <!-- Logo grid -->
       <div class="logo-grid" id="logoGrid">
+        <div class="logo-cell" data-sectors="fintech b2b legaltech"><span>Thirdfort</span></div>
         <div class="logo-cell" data-sectors="fintech consumer"><span>Tide</span></div>
         <div class="logo-cell" data-sectors="fintech travel"><span>Travelex</span></div>
         <div class="logo-cell" data-sectors="b2b consumer"><span>Utility Warehouse</span></div>
@@ -719,7 +725,7 @@
           <h2>Pick a time.<br><em>Let's get into it.</em></h2>
           <p>No pitch. No proposal before we've spoken. Just a straight conversation about where you are, what's not working, and whether I can help.</p>
           <p>Book a 15 or 30 minute slot below — or drop me an email if you'd rather start that way.</p>
-          <a href="mailto:carl@cloudcmo.co.uk" class="btn-primary" style="margin-top: 28px;">Email me directly →</a>
+          <a href="/cdn-cgi/l/email-protection#35565447597556595a405156585a1b565a1b405e" class="btn-primary" style="margin-top: 28px;">Email me directly →</a>
         </div>
         <div>
           <!-- Replace the src below with your Zoom scheduler embed URL -->
@@ -739,11 +745,11 @@
   <footer>
     <div class="container">
       <a href="/" class="logo">Cloud<span>CMO</span><sup>®</sup></a>
-      <p class="footer-text">Carl Mesner Lyons · Strategic Marketing Advisor · London · carl@cloudcmo.co.uk</p>
+      <p class="footer-text">Carl Mesner Lyons · Strategic Marketing Advisor · London · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80e3e1f2ecc0e3eceff5e4e3edefaee3efaef5eb">[email&#160;protected]</a></p>
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function filterSector(sector, btn) {
       document.querySelectorAll('.sector-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -757,16 +763,4 @@
         }
       });
 
-      document.querySelectorAll('.testimonial').forEach(t => {
-        const sectors = t.dataset.sectors || '';
-        if (sector === 'all' || sectors.includes(sector)) {
-          t.style.display = '';
-        } else {
-          t.style.display = 'none';
-        }
-      });
-    }
-  </script>
-
-</body>
-</html>
+      document.querySelectorAll('.testim
