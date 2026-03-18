@@ -1,23 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carl Lyons — Strategic Marketing Advisor</title>
-  <meta name="description" content="Carl Lyons helps businesses get clear on what they are, why they matter, and how to communicate it. Strategic marketing advisor based in London.">
+  <title>Cloud CMO — Carl Mesner Lyons</title>
+  <meta name="description" content="Carl Mesner Lyons helps businesses get clear on what they are, why they matter, and how to communicate it. Strategic marketing advisor based in London.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --black: #0f0f0e;
+      --black: #111110;
       --white: #fafaf8;
-      --muted: #6b6b67;
-      --hint: #a8a8a3;
-      --border: rgba(15,15,14,0.12);
-      --serif: 'DM Serif Display', Georgia, serif;
+      --muted: #64635f;
+      --hint: #a09f9a;
+      --border: rgba(17,17,16,0.1);
+      --orange: #f45d00;
+      --orange-light: rgba(244,93,0,0.06);
+      --serif: 'Syne', system-ui, sans-serif;
       --sans: 'DM Sans', system-ui, sans-serif;
     }
 
@@ -32,13 +35,14 @@
     }
 
     .container {
-      max-width: 880px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 0 32px;
     }
 
+    /* ── Nav ── */
     nav {
-      padding: 28px 0;
+      padding: 26px 0;
       border-bottom: 0.5px solid var(--border);
     }
 
@@ -50,28 +54,33 @@
 
     .logo {
       font-family: var(--serif);
-      font-size: 18px;
+      font-size: 16px;
+      font-weight: 700;
       color: var(--black);
       text-decoration: none;
-      letter-spacing: -0.2px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
+
+    .logo span { color: var(--orange); }
 
     .nav-cta {
       font-size: 13px;
       font-weight: 500;
       padding: 9px 20px;
-      border: 0.5px solid rgba(15,15,14,0.35);
+      border: 1.5px solid var(--orange);
       border-radius: 100px;
-      color: var(--black);
+      color: var(--orange);
       text-decoration: none;
-      transition: background 0.15s, border-color 0.15s;
+      transition: background 0.15s, color 0.15s;
     }
 
     .nav-cta:hover {
-      background: rgba(15,15,14,0.05);
-      border-color: rgba(15,15,14,0.5);
+      background: var(--orange);
+      color: var(--white);
     }
 
+    /* ── Sections ── */
     section {
       padding: 88px 0;
       border-bottom: 0.5px solid var(--border);
@@ -82,35 +91,43 @@
       font-weight: 500;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--hint);
+      color: var(--orange);
       margin-bottom: 52px;
     }
 
+    /* ── Typography ── */
     h1 {
       font-family: var(--serif);
-      font-size: clamp(54px, 9vw, 92px);
+      font-weight: 800;
+      font-size: clamp(52px, 8.5vw, 88px);
       line-height: 1.0;
-      letter-spacing: -2.5px;
+      letter-spacing: -1.5px;
       margin-bottom: 32px;
     }
 
-    h1 em, h2 em {
-      font-style: italic;
-      color: var(--muted);
+    h1 em {
+      font-style: normal;
+      color: var(--orange);
     }
 
     h2 {
       font-family: var(--serif);
-      font-size: clamp(34px, 5vw, 50px);
+      font-weight: 700;
+      font-size: clamp(32px, 5vw, 48px);
       line-height: 1.08;
-      letter-spacing: -1px;
+      letter-spacing: -0.5px;
       margin-bottom: 24px;
+    }
+
+    h2 em {
+      font-style: normal;
+      color: var(--orange);
     }
 
     h3 {
       font-family: var(--serif);
-      font-size: 21px;
-      letter-spacing: -0.3px;
+      font-weight: 700;
+      font-size: 20px;
       margin-bottom: 14px;
     }
 
@@ -123,6 +140,7 @@
 
     p + p { margin-top: 16px; }
 
+    /* ── Hero ── */
     #hero { padding: 104px 0 88px; }
 
     .hero-sub {
@@ -136,7 +154,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--black);
+      background: var(--orange);
       color: var(--white);
       font-family: var(--sans);
       font-size: 14px;
@@ -149,8 +167,9 @@
       transition: opacity 0.15s;
     }
 
-    .btn-primary:hover { opacity: 0.78; }
+    .btn-primary:hover { opacity: 0.85; }
 
+    /* ── Two col ── */
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -158,6 +177,7 @@
       align-items: start;
     }
 
+    /* ── Problem list ── */
     .problem-list { list-style: none; }
 
     .problem-item {
@@ -175,12 +195,14 @@
     .problem-item:last-child { border-bottom: 0.5px solid var(--border); }
 
     .dash {
-      color: var(--hint);
-      font-size: 14px;
-      margin-top: 3px;
+      color: var(--orange);
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 2px;
       flex-shrink: 0;
     }
 
+    /* ── What points ── */
     .what-points {
       list-style: none;
       margin-top: 36px;
@@ -192,10 +214,11 @@
 
     .point-num {
       font-family: var(--serif);
-      font-size: 13px;
-      color: var(--hint);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--orange);
       min-width: 22px;
-      padding-top: 2px;
+      padding-top: 3px;
       flex-shrink: 0;
     }
 
@@ -215,6 +238,7 @@
       color: var(--hint);
     }
 
+    /* ── Approach grid ── */
     .approach-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -224,14 +248,21 @@
       border: 0.5px solid var(--border);
     }
 
-    .stage { background: var(--white); padding: 36px 28px 32px; }
+    .stage {
+      background: var(--white);
+      padding: 36px 28px 32px;
+      transition: background 0.2s;
+    }
+
+    .stage:hover { background: var(--orange-light); }
 
     .stage-num {
       font-family: var(--serif);
-      font-size: 44px;
+      font-size: 40px;
+      font-weight: 800;
       line-height: 1;
-      color: var(--black);
-      opacity: 0.1;
+      color: var(--orange);
+      opacity: 0.3;
       margin-bottom: 20px;
     }
 
@@ -250,9 +281,10 @@
       font-weight: 500;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--hint);
+      color: var(--orange);
     }
 
+    /* ── Clients ── */
     .client-tags {
       display: flex;
       flex-wrap: wrap;
@@ -264,22 +296,29 @@
       font-size: 13px;
       font-weight: 500;
       padding: 7px 16px;
-      border: 0.5px solid rgba(15,15,14,0.25);
+      border: 0.5px solid rgba(17,17,16,0.2);
       border-radius: 100px;
       color: var(--muted);
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .client-tag:hover {
+      border-color: var(--orange);
+      color: var(--orange);
     }
 
     .pullquote {
       font-family: var(--serif);
-      font-size: clamp(22px, 3.5vw, 34px);
+      font-weight: 600;
+      font-size: clamp(20px, 3vw, 30px);
       line-height: 1.35;
-      letter-spacing: -0.5px;
       margin-top: 52px;
       padding-left: 28px;
-      border-left: 2px solid rgba(15,15,14,0.35);
+      border-left: 3px solid var(--orange);
       color: var(--black);
     }
 
+    /* ── Diff grid ── */
     .diff-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -291,6 +330,8 @@
 
     .diff-cell { background: var(--white); padding: 32px 28px; }
 
+    .diff-cell:nth-child(even) { background: var(--orange-light); }
+
     .diff-label {
       font-size: 11px;
       font-weight: 500;
@@ -300,6 +341,8 @@
       margin-bottom: 14px;
     }
 
+    .diff-cell:nth-child(even) .diff-label { color: var(--orange); }
+
     .diff-text {
       font-size: 16px;
       line-height: 1.65;
@@ -307,6 +350,7 @@
       font-weight: 300;
     }
 
+    /* ── CTA ── */
     #cta {
       padding: 104px 0;
       text-align: center;
@@ -322,6 +366,7 @@
       margin: 0 auto 48px;
     }
 
+    /* ── Footer ── */
     footer {
       padding: 36px 0;
       border-top: 0.5px solid var(--border);
@@ -335,13 +380,14 @@
 
     .footer-text { font-size: 13px; color: var(--hint); }
 
+    /* ── Mobile ── */
     @media (max-width: 640px) {
       .container { padding: 0 20px; }
       .two-col { grid-template-columns: 1fr; gap: 48px; }
       .approach-grid { grid-template-columns: 1fr; }
       .diff-grid { grid-template-columns: 1fr; }
       footer .container { flex-direction: column; gap: 10px; text-align: center; }
-      h1 { letter-spacing: -1.5px; }
+      h1 { letter-spacing: -1px; }
     }
   </style>
 </head>
@@ -350,7 +396,7 @@
   <header>
     <nav>
       <div class="container">
-        <a href="/" class="logo">Carl Lyons</a>
+        <a href="/" class="logo">Cloud<span>CMO</span></a>
         <a href="mailto:carl@cloudcmo.com" class="nav-cta">Start with a conversation</a>
       </div>
     </nav>
@@ -358,9 +404,9 @@
 
   <section id="hero">
     <div class="container">
-      <p class="section-label">Strategic Marketing Advisor</p>
+      <p class="section-label">Carl Mesner Lyons · Strategic Marketing Advisor</p>
       <h1>Get famous.<br><em>Stay relevant.</em></h1>
-      <p class="hero-sub">You know your business is good. The problem is, not enough people know it — or understand why it matters. Carl Lyons helps senior leaders get clear on what they are, why they matter, and how to say it.</p>
+      <p class="hero-sub">You know your business is good. The problem is, not enough people know it — or understand why it matters. Carl Mesner Lyons helps senior leaders get clear on what they are, why they matter, and how to say it.</p>
       <a href="mailto:carl@cloudcmo.com" class="btn-primary">Start with a conversation →</a>
     </div>
   </section>
@@ -513,8 +559,8 @@
 
   <footer>
     <div class="container">
-      <a href="/" class="logo">Carl Lyons</a>
-      <p class="footer-text">Strategic Marketing Advisor · London · carl@cloudcmo.com</p>
+      <a href="/" class="logo">Cloud<span>CMO</span></a>
+      <p class="footer-text">Carl Mesner Lyons · Strategic Marketing Advisor · London · carl@cloudcmo.com</p>
     </div>
   </footer>
 
